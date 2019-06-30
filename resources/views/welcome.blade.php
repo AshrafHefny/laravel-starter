@@ -1,0 +1,1 @@
+{{ trans('app.welcome') }}

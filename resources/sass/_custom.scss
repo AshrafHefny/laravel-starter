@@ -1,0 +1,148 @@
+.custom-file{
+    height: auto;
+}
+.card-people-list a{
+    display: inline;
+}
+.nav-activity-profile .active a{
+    background-color: #d2d0d0;
+}
+.modal-body label{
+    white-space: nowrap;
+    color: #5b636a;
+}
+/*.childs .nav-link{
+    padding: 0.5rem 0.8rem;
+} */
+.modal-dialog{
+    width: 100%;
+}
+.ui-datepicker{
+    z-index: 10000 !important;
+}
+
+.bg-69{
+    background-color: #F49917 !important;
+
+}
+.bg-68{
+    background-color:  #dc3545 !important;
+}
+
+.bg-70{
+    background-color:  #23BF08 !important;
+}
+.form-control-label{
+    padding-top: 5px;
+}
+.fc-toolbar .fc-button{
+    background-color: #1b84e7;
+}
+.fc-scroller{
+    height: auto !important;
+    overflow: hidden;
+} 
+
+table thead,
+table tbody {
+    width: 100%;
+}
+
+
+
+.card-profile .card-body{
+    padding: 15px;
+}
+.media-body .inline{
+    display: inline-block;
+}
+.nav-activity-profile .nav-link{
+    font-size: 12px !important;
+}
+
+.card-people-list .media-list{
+    margin-top: 10px;
+}
+.widget .icon{
+    font-size: 45px;
+}
+.widget .media-body{
+    margin-top: 5px;  
+}
+.widget.media.card-people-list {
+    padding: 0;
+}
+
+.ckbox span:after{
+    font-weight: 600;
+    font-family:"Font Awesome 5 Free" !important;
+}
+.ui-datepicker-next:before, .ui-datepicker-prev:before{
+    font-family:"Font Awesome 5 Free" !important;
+    font-weight: 600;
+}
+.fc-toolbar h2 {
+    font-size: 16px !important;
+}
+.card.active{
+    background-color: #d2d2d2;
+}
+.nav-tabs .nav-link.active{
+    background-color: #d6d9e0;
+}
+.accordion-one .card-header a::before{
+    font-family:"Font Awesome 5 Free" !important;
+    font-weight: 600;
+}
+.accordion-one.payments>table>thead>td>th, .accordion-one.payments>table>thead>td>td{
+    padding: 5px !important;
+    font-size: 10px !important;
+}
+.dataTables_wrapper .dataTables_filter input{
+    margin-left: 0px;
+}
+@media print
+{    
+    .no-print
+    {
+        display: none !important;
+    }
+}
+.card-status{
+    padding: 15px;
+}
+.floatButton-right{
+    right:40px;
+    background-color:#4baf9a;
+}
+.floatButton-left{
+    left:40px;
+    background-color:#dc3545;
+}
+.floatButton{
+    position:fixed;
+    width:80px;
+    height:80px;
+    bottom:40px;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+    font-size: 40px;
+    color:#FFF;
+}
+.floatButton:hover{
+    color:#FFF;
+    background-color:#578622;
+}
+.my-float{
+    margin-top:20px;
+}
+.paganition-center ul{
+    justify-content: center;
+}
+.custom.messages-list {
+    position: inherit;
+}
+.bg-message{
+    background-color:#dc3545 !important;   
+}
