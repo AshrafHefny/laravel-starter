@@ -12,7 +12,7 @@
         @include($module.'.form',$row)
         <!-- custom-file -->
         <div class="form-layout-footer mg-t-30">
-            <button type="button" class="btn btn-primary bd-0">{{ trans('app.Save') }}</button>
+            <button type="submit" class="btn btn-primary bd-0">{{ trans('app.Save') }}</button>
         </div>
         {!! Form::close() !!}
         <!-- form-layout-footer -->
