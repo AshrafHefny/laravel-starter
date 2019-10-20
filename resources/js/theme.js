@@ -53,26 +53,26 @@ $(function () {
     // inject template options content
     /*$.get('../settings.html', function(data){
      $('body').append(data);
-     
+
      if($.fn.perfectScrollbar) {
      $('.template-options-inner').perfectScrollbar({
      suppressScrollX: true
      });
      }
-     
+
      // set direction value in settings
      if(isRtl) {
      $('.slim-direction[value="rtl"]').prop('checked', true);
      } else {
      $('.slim-direction[value="ltr"]').prop('checked', true);
      }
-     
+
      if(isSidebar) {
      $('.nav-layout[value="vertical"]').prop('checked', true);
      } else {
      $('.nav-layout[value="horizontal"]').prop('checked', true);
      }
-     
+
      //check if header set to sticky
      if($.cookie('sticky-header')) {
      $('body').addClass('slim-sticky-header');
@@ -80,7 +80,7 @@ $(function () {
      } else {
      $('.sticky-header[value="no"]').prop('checked', true);
      }
-     
+
      //check if header have skin
      if($.cookie('header-skin')) {
      var sk = $.cookie('header-skin');
@@ -90,7 +90,7 @@ $(function () {
      } else {
      $('.header-skin[value="default"]').prop('checked', true);
      }
-     
+
      //check if page set to wide
      if($.cookie('full-width')) {
      $('body').addClass('slim-full-width');
@@ -98,7 +98,7 @@ $(function () {
      } else {
      $('.full-width[value="no"]').prop('checked', true);
      }
-     
+
      //check if sidebar set to sticky
      if($.cookie('sticky-sidebar') && $('.slim-sidebar').length) {
      $('body').addClass('slim-sticky-sidebar');
@@ -300,9 +300,10 @@ $(function () {
         dateFormat: 'yy-mm-dd',
         changeMonth: true,
         changeYear: true,
+        maxDate: 0,
         yearRange:'c-90:c+10'
     });
-    
+
     $('.editor').trumbowyg({
         svgPath: 'svg/icons.svg',
         btns: [
@@ -317,17 +318,10 @@ $(function () {
             ['unorderedList', 'orderedList'],
             // ['horizontalRule'],
             ['removeformat'],
-                    //['fullscreen']
+            //['fullscreen']
         ]
     });
     $('.timepicker').timepicker({'disableTextInput': true, 'scrollDefault': 'now', 'step': 15, 'timeFormat': 'h:i A'});
-
-    $(".datetimepicker").flatpickr({
-                enableTime: true,
-                dateFormat: "Y-m-d H:i:ss",
-                time_24hr: true,
-                position: 'above'
-            });
 
     $('.peity-donut').peity('donut');
     $(document).on('keydown', 'input[pattern]', function (e) {
@@ -342,10 +336,4 @@ $(function () {
         }, 0);
     });
 
-
-    // summernote text editor
-    $('.summernote').summernote({
-        height: 150,
-        tooltip: false
-    });
 });

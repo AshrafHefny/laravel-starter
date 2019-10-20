@@ -41,7 +41,7 @@
 .fc-scroller{
     height: auto !important;
     overflow: hidden;
-} 
+}
 
 table thead,
 table tbody {
@@ -67,7 +67,7 @@ table tbody {
     font-size: 45px;
 }
 .widget .media-body{
-    margin-top: 5px;  
+    margin-top: 5px;
 }
 .widget.media.card-people-list {
     padding: 0;
@@ -102,7 +102,7 @@ table tbody {
     margin-left: 0px;
 }
 @media print
-{    
+{
     .no-print
     {
         display: none !important;
@@ -144,5 +144,5 @@ table tbody {
     position: inherit;
 }
 .bg-message{
-    background-color:#dc3545 !important;   
+    background-color:#dc3545 !important;
 }

@@ -144,35 +144,30 @@ $(function () {
 
   /*$.get('../settings.html', function(data){
    $('body').append(data);
-   
-   if($.fn.perfectScrollbar) {
+    if($.fn.perfectScrollbar) {
    $('.template-options-inner').perfectScrollbar({
    suppressScrollX: true
    });
    }
-   
-   // set direction value in settings
+    // set direction value in settings
    if(isRtl) {
    $('.slim-direction[value="rtl"]').prop('checked', true);
    } else {
    $('.slim-direction[value="ltr"]').prop('checked', true);
    }
-   
-   if(isSidebar) {
+    if(isSidebar) {
    $('.nav-layout[value="vertical"]').prop('checked', true);
    } else {
    $('.nav-layout[value="horizontal"]').prop('checked', true);
    }
-   
-   //check if header set to sticky
+    //check if header set to sticky
    if($.cookie('sticky-header')) {
    $('body').addClass('slim-sticky-header');
    $('.sticky-header[value="yes"]').prop('checked', true);
    } else {
    $('.sticky-header[value="no"]').prop('checked', true);
    }
-   
-   //check if header have skin
+    //check if header have skin
    if($.cookie('header-skin')) {
    var sk = $.cookie('header-skin');
    $('body').addClass(sk);
@@ -181,16 +176,14 @@ $(function () {
    } else {
    $('.header-skin[value="default"]').prop('checked', true);
    }
-   
-   //check if page set to wide
+    //check if page set to wide
    if($.cookie('full-width')) {
    $('body').addClass('slim-full-width');
    $('.full-width[value="yes"]').prop('checked', true);
    } else {
    $('.full-width[value="no"]').prop('checked', true);
    }
-   
-   //check if sidebar set to sticky
+    //check if sidebar set to sticky
    if($.cookie('sticky-sidebar') && $('.slim-sidebar').length) {
    $('body').addClass('slim-sticky-sidebar');
    $('.sticky-sidebar[value="yes"]').prop('checked', true);
@@ -400,6 +393,7 @@ $(function () {
     dateFormat: 'yy-mm-dd',
     changeMonth: true,
     changeYear: true,
+    maxDate: 0,
     yearRange: 'c-90:c+10'
   });
   $('.editor').trumbowyg({
@@ -409,19 +403,14 @@ $(function () {
     ['formatting'], ['strong', 'em', 'del'], //  ['superscript', 'subscript'],
     ['link'], //  ['insertImage'],
     ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'], ['unorderedList', 'orderedList'], // ['horizontalRule'],
-    ['removeformat']]
+    ['removeformat'] //['fullscreen']
+    ]
   });
   $('.timepicker').timepicker({
     'disableTextInput': true,
     'scrollDefault': 'now',
     'step': 15,
     'timeFormat': 'h:i A'
-  });
-  $(".datetimepicker").flatpickr({
-    enableTime: true,
-    dateFormat: "Y-m-d H:i:ss",
-    time_24hr: true,
-    position: 'above'
   });
   $('.peity-donut').peity('donut');
   $(document).on('keydown', 'input[pattern]', function (e) {
@@ -435,11 +424,6 @@ $(function () {
         input.val(oldVal);
       }
     }, 0);
-  }); // summernote text editor
-
-  $('.summernote').summernote({
-    height: 150,
-    tooltip: false
   });
 });
 
@@ -452,7 +436,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/work/environbe/resources/js/theme.js */"./resources/js/theme.js");
+module.exports = __webpack_require__(/*! /var/www/html/laravel-starter/resources/js/theme.js */"./resources/js/theme.js");
 
 
 /***/ })
