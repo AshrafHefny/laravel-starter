@@ -16,11 +16,11 @@ mix.styles([
     'resources/lib/Ionicons/css/ionicons.css',
     'resources/lib/datatables/css/jquery.dataTables.css',
     'resources/lib/select2/css/select2.min.css',
+    'resources/lib/selectize/css/selectize.css',
     'node_modules/trumbowyg/dist/ui/trumbowyg.css',
     'resources/lib/jt.timepicker/css/jquery.timepicker.css',
     'resources/lib/jquery.steps/css/jquery.steps.css',
-    'resources/lib/medium-editor/css/medium-editor.css',
-    'resources/lib/summernote/css/summernote-bs4.css'
+    'resources/lib/mdb/css/mdb.min.css',
 ], 'public/css/vendors.css');
 mix.sass('resources/sass/app.scss', 'public/css');
 
@@ -32,14 +32,14 @@ mix.scripts([
     'resources/lib/datatables/js/jquery.dataTables.js',
 //    'resources/lib/datatables-responsive/js/dataTables.responsive.js',
     'resources/lib/select2/js/select2.min.js',
+    'resources/lib/selectize/js/selectize.min.js',
     'resources/lib/notify/js/notify.min.js',
     'node_modules/trumbowyg/dist/trumbowyg.js',
     'resources/lib/jt.timepicker/js/jquery.timepicker.js',
     'resources/lib/peity/js/jquery.peity.js',
     'resources/lib/jquery.steps/js/jquery.steps.js',
     'resources/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js',
-    'resources/lib/summernote/js/summernote-bs4.min.js',
-    'resources/lib/medium-editor/js/medium-editor.js'
+    'resources/lib/mdb/js/mdb.min.js',
 ], 'public/js/vendors.js');
 mix.js('resources/js/app.js', 'public/js');
 mix.js('resources/js/theme.js', 'public/js');

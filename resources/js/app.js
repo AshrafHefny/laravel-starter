@@ -1,5 +1,5 @@
 window.Vue = require('vue');
-import axios from 'axios'; 
+import axios from 'axios';
 import Swal from 'sweetalert2';
 import JsonExcel from 'vue-json-excel';
 
@@ -16,22 +16,16 @@ const toast = Swal.mixin({
     position: 'top-end',
     showConfirmButton: false,
     timer: 3000
-  });
-window.toast = toast;  
+});
+window.toast = toast;
 window.obj = {};
 window.editmode = false;
 Vue.component('parents-index', require('./components/parents/Index.vue').default);
-import _ from 'lodash'; 
+import _ from 'lodash';
 Vue.prototype.trans = (key) => {
     return _.get(window.trans, key, key);
 };
-window.$ = window.jQuery = require('jquery');
-
-require('moment');
-import flatpickr from "flatpickr";
-
-// require('pc-bootstrap4-datetimepicker');
 // const app = new Vue({
 //     el: '#app',
-   
+
 //  });
