@@ -10,23 +10,23 @@
         {!! Form::model($row,['method' => 'POST', 'files' => true] ) !!}
         {{ csrf_field() }}
         <input type="hidden" name="id" value="{{ $row->id }}">
-        @php 
+        @php
         $attributes=['class'=>'form-control','label'=>trans('profile.First name'),'placeholder'=>trans('profile.First name'),'required'=>1];
         @endphp
         @include('form.input',['name'=>'first_name','type'=>'text','attributes'=>$attributes])
 
-        @php 
+        @php
         $attributes=['class'=>'form-control','label'=>trans('profile.Last name'),'placeholder'=>trans('profile.Last name'),'required'=>1];
         @endphp
         @include('form.input',['name'=>'last_name','type'=>'text','attributes'=>$attributes])
-        
-        
-        @php 
+
+
+        @php
         $attributes=['class'=>'form-control','label'=>trans('profile.Email'),'placeholder'=>trans('profile.Email'),'required'=>1];
         @endphp
         @include('form.input',['name'=>'email','type'=>'email','attributes'=>$attributes])
-        
-        @php 
+
+        @php
         $attributes=['class'=>'form-control','label'=>trans('profile.mobile_number'),'placeholder'=>trans('profile.mobile_number'),'required'=>1];
         @endphp
         @include('form.input',['name'=>'mobile_number','type'=>'text','attributes'=>$attributes])
@@ -54,12 +54,12 @@
             ]
         )
 
-        @php 
+        @php
         $attributes=['class'=>'form-control','label'=>trans('profile.Password'),'placeholder'=>trans('profile.Password')];
         @endphp
         @include('form.password',['name'=>'password','attributes'=>$attributes])
 
-        @php 
+        @php
         $attributes=['class'=>'form-control','label'=>trans('profile.Password confirmation'),'placeholder'=>trans('profile.Password confirmation')];
         @endphp
         @include('form.password',['name'=>'password_confirmation','attributes'=>$attributes])

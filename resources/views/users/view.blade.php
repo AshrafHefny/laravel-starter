@@ -32,19 +32,14 @@
             @endif
 
             <tr>
-                <td width="25%" class="align-left">{{trans('users.First name')}}</td>
-                <td width="75%" class="align-left">{{@$row->first_name}}</td>
+                <td width="25%" class="align-left">{{trans('users.name')}}</td>
+                <td width="75%" class="align-left">{{@$row->name}}</td>
             </tr>
 
-            <tr>
-                <td width="25%" class="align-left">{{trans('users.Last name')}}</td>
-                <td width="75%" class="align-left">{{@$row->last_name}}</td>
-            </tr>
-
-            <tr>
-                <td width="25%" class="align-left">{{trans('users.Address')}}</td>
-                <td width="75%" class="align-left">{{@$row->address}}</td>
-            </tr>
+{{--            <tr>--}}
+{{--                <td width="25%" class="align-left">{{trans('users.Address')}}</td>--}}
+{{--                <td width="75%" class="align-left">{{@$row->address}}</td>--}}
+{{--            </tr>--}}
 
             <tr>
                 <td width="25%" class="align-left">{{trans('users.Email')}}</td>
@@ -65,35 +60,7 @@
             </tr>
             @endif
 
-            @if($row->supervisor()->exists())
 
-                @include('users/supervisorData')
-                
-            @endif
-
-            @if($row->employee()->exists())
-
-                @include('users/employeeData')
-                
-            @endif
-
-            @if($row->contractor()->exists())
-
-                @include('users/contractorData')
-
-            @endif
-
-            @if($row->worker()->exists())
-
-                @include('users/workerData')
-
-            @endif
-
-            @if($row->editor()->exists())
-
-                @include('users/editorData')
-
-            @endif
 
         </table>
     </div>

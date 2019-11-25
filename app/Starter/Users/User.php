@@ -4,22 +4,8 @@ namespace App\Starter\Users;
 
 use App\Starter\BaseApp\Traits\CreatedBy;
 use App\Starter\BaseApp\Traits\HasAttach;
-use App\Starter\Cars\Car;
-use App\Starter\Competitions\ProvidedAnswer;
-use App\Starter\Departments\Department;
-use App\Starter\Entities\Entity;
-use App\Starter\Incidents\Incident;
 use App\Starter\Options\Option;
-use App\Starter\Users\Models\Citizen;
-use App\Starter\Users\Models\Contractor;
-use App\Starter\Users\Models\Editor;
-use App\Starter\Users\Models\Employee;
-use App\Starter\Users\Models\FirebaseToken;
 use App\Starter\Users\Models\Role;
-use App\Starter\Users\Models\Supervisor;
-use App\Starter\Users\Models\Worker;
-use App\Starter\Violations\Violation;
-use App\Starter\WorkingArea\WorkingArea;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -40,7 +26,8 @@ class User extends Authenticatable implements JWTSubject
     ];
     protected $table = "users";
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'type',
         'email',
         'mobile_number',
@@ -98,6 +85,22 @@ class User extends Authenticatable implements JWTSubject
                 return $q->onlyTrashed();
             });
         return $query;
+    }
+
+    public function getLocales()
+    {
+        $locales = [];
+
+        foreach (config('laravellocalization.supportedLocales') as $key => $value) {
+            $locales[$key] = $value['native'];
+        }
+
+        return $locales;
+    }
+
+    public function getFullNameAttribute()
+    {
+        return "{$this->first_name} {$this->last_name}";
     }
 
     public function export($rows, $fileName)

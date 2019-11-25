@@ -24,11 +24,11 @@
         @slot('header')
             {{ trans('users.Filter users') }}
         @endslot
-        
+
         @if(request('type'))
             <input type="hidden" name="type" value="{{ request('type') ?? '' }}">
         @endif
-        
+
         @include('form.select',[
             'name'=>'deleted',
             'options'=> ['no' => trans('app.No'), 'yes' => trans('app.Yes')],
@@ -76,7 +76,7 @@
                         <td class="center"><img src="img/{{($row->is_admin)?'check.png':'close.png'}}"></td>
                     @endif
 
-                    <td class="center">{{$row->name}}</td>
+                    <td class="center">{{$row->full_name}}</td>
                     <td class="center">{{$row->email}}</td>
                     <td class="center">{{$row->mobile_number}}</td>
                     <td class="center">{{$row->confirmed ? trans('users.Confirmed') : trans('users.Not Confirmed')}}</td>
@@ -101,7 +101,7 @@
                             @endif
 
                         @endif
-                        
+
                     </td>
                 </tr>
                 @endforeach
@@ -112,7 +112,7 @@
     {{trans("users.There is no results")}}
     @endif
     @endif
-    
+
     <br>
     {{ $rows->links() }}
 </div>
