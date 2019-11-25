@@ -27,12 +27,19 @@
 </div>
 
 
-
+{{--First Name--}}
 @php
-$attributes=['class'=>'form-control','label'=>trans('users.Name'),'placeholder'=>trans('users.Name'),'required'=>1];
+    $attributes=['class'=>'form-control','label'=>trans('users.First name'),'placeholder'=>trans('users.First name')];
 @endphp
+@include('form.input',['name'=>'first_name','type'=>'text','attributes'=>$attributes])
 
-@include('form.input',['name'=>'name','type'=>'text','attributes'=>$attributes])
+{{--Last Name --}}
+@php
+    $attributes=['class'=>'form-control','label'=>trans('users.Last name'),'placeholder'=>trans('users.Last name')];
+@endphp
+@include('form.input',['name'=>'last_name','type'=>'text','attributes'=>$attributes])
+
+
 @php
     $attributes=['class'=>'form-control','label'=>trans('users.Email'),'placeholder'=>trans('users.Email')];
 @endphp
